@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web Survey">
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey</title>
+  </head>
+  <body>
+    <div class="container">
+    <header class="heading-s">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking your time to fill out the survey</p>
+    </header>
+    <form id="survey-form">
+      <!-- Name -->
+      <div class="group">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" class="lin" required/>
+      </div>
+
+      <!-- Email-->
+      <div class="group">
+        <label id="email-label" for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" class="lin" required/>
+      </div>
+
+      <!-- Number-->
+      <div class="group">
+        <label id="number-label" for="number">Age</label>
+        <input
+          name="number" 
+          id="number"
+          type="number"
+          class="lin"
+          min="8"
+          max="120"
+          placeholder="Enter your age"
+          required
+        />
+      </div>
+
+      <!-- Dropdown-->
+      <div class="group">
+        <label id="dropdown-label" for="dropdown">What is your current education level?</label>
+        <select id="dropdown" class="lin">
+          <option disabled selected>Select a option</option>
+          <option value="Middle School">Middle School</option>
+          <option value="High School">High School</option>
+          <option value="College">College</option>
+          <option value="Beyond College">Beyond College</option>
+          <option value="Never been to school">Never been to school</option>
+        </select>
+      </div>
+
+      <!-- Radio options-->
+      <div class="group radio-g">
+        <p>Do you use any social media?</p>
+        <label><input type="radio" name="User-Interest" value="yes" checked/> Yes</label>
+        <label><input type="radio" name="User-Interest" value="no"/> No</label>
+      </div>
+
+      <div class="group">
+        <p>What type of social media do you use? (Check all that apply)</p>
+        <label><input type="checkbox" name="prefer" value="instagram"/>Instagram</label>
+        <label><input type="checkbox" name="prefer" value="youtube"/>YouTube</label>
+        <label><input type="checkbox" name="prefer" value="tiktok"/>TikTok</label>
+        <label><input type="checkbox" name="prefer" value="facebook"/>Facebook</label>
+        <label><input type="checkbox" name="prefer" value="omegle"/>Omegle</label>
+      </div>
+
+      <div class="group">
+        <label for="comments">Why do you use social media?</label>
+        <textarea id="comments" placeholder="enter your feedback"></textarea>
+      </div>
+      <div class="group">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
